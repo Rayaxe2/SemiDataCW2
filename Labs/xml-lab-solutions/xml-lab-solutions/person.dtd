@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT person (name, profession*) >
+<!ATTLIST person id ID #REQUIRED >
+<!ELEMENT name (first, last) >
+<!ELEMENT first (#PCDATA) >
+<!ELEMENT last (#PCDATA) >
+<!ELEMENT profession (#PCDATA) >

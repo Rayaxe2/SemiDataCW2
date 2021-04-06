@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+
+<xs:element name="person">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="name"/>
+  <xs:element ref="birth"/>
+  <xs:element ref="death"/>
+  <xs:element ref="profession" minOccurs='1' maxOccurs='unbounded'/>
+ </xs:sequence>
+  <xs:attribute name="id" type="xs:string"/>
+ </xs:complexType>
+</xs:element>
+
+ <xs:element name="name">
+ 	<xs:complexType>
+		 <xs:sequence>
+ 			<xs:element ref="first"/>
+ 			<xs:element ref="last"/>
+ 		</xs:sequence>
+ 	</xs:complexType>
+ </xs:element>
+
+ <xs:element name="first" type='xs:string'/>
+ <xs:element name="last" type='xs:string'/>
+ <xs:element name="birth" type='xs:date'/>
+ <xs:element name="death" type='xs:date'/>
+ <xs:element name="profession" type='xs:string'/>
+</xs:schema>
